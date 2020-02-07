@@ -17,7 +17,6 @@ connection.connect(function(err) {
       console.error('error connecting: ' + err.stack);
       return;
     }
-   
     console.log('connected as id ' + connection.threadId);
 });
 
@@ -28,9 +27,6 @@ connection.query("INSERT INTO company_info(name,CNPJ,CorporateName) VALUES('Nome
         console.log('Error. Unregistered user');
     }
 })
-
-
-
 
 app.use(express.json());
 app.use(routes);
